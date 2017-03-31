@@ -24,8 +24,15 @@ class Home extends View
     @notifications = new Stream twitter.account, 'user', {}
     @content.pushState @timeline
 
-    @timeline.filter = (data) ->
-      if data.type is 'data' then true else false
+    @timeline.filter = (data) =>
+      if data.type is 'data'
+        true
+      else if data.type is 'delete'
+        # find status and delete it
+        # TODO: clean up
+        for child in @timeline.children
+          if child?.tweet?.id_str is data?.data?.delete?.status?.id_str
+            child.classList.add 'deleted'
     @mentions.filter = (data) ->
       if data.type is 'data' and data.data.user.id_str isnt twitter.account
         true

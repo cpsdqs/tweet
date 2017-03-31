@@ -6,6 +6,10 @@ ui-tweet {
   display: block;
   user-select: none;
 
+  &.deleted {
+    background: fade(@delete, 30%);
+  }
+
   .tweet-header {
     padding-left: 80px;
     font-size: 0.8em;

@@ -5,6 +5,7 @@ IconButton = require './icon-button'
 EntityText = require './entity-text'
 ipc = require './ipc'
 twitter = require './twitter-interface'
+{ remote: { Menu, MenuItem } } = require 'electron'
 
 class Tweet extends View
   constructor: (tweet) ->
@@ -66,6 +67,26 @@ class Tweet extends View
       twitter.request(twitter.account, command, @tweet.id_str).then (res) =>
         console.log @, res
         @fromTweet res
+
+  @get contextMenu: ->
+    items = []
+
+    # add reply, like [and retweet when that's implemented]
+    # TODO: move reply and like into extra methods
+    items.push new MenuItem
+      label: "Reply to #{@tweet.user.name}"
+      click: => @buttons.reply.click()
+    items.push new MenuItem
+      label: "#{if @tweet.favorited then 'Unl' else 'L'}ike Tweet"
+      click: => @buttons.like.click()
+
+    # add delete if this is an own tweet
+    if @tweet.user.id_str is twitter.account
+      items.push new MenuItem
+        label: 'Delete',
+        click: =>
+          twitter.request twitter.account, 'deleteTweet', @tweet.id_str
+    items
 
   fromTweet: (tweet) ->
     @tweet = tweet

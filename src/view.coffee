@@ -42,3 +42,9 @@ module.exports =
     # emit a disconnected event to allow multiple listeners
     disconnectedCallback: ->
       @emit 'disconnected'
+
+    # return an array of items (or nothing) to show in the context menu
+    @get contextMenu: ->
+
+    # noop setter
+    @set contextMenu: (v) ->

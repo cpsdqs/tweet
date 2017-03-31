@@ -81,7 +81,7 @@ module.exports =
         options =
           id: id
           tweet_mode: 'extended'
-        @client.post("status/destroy/#{id}", options).then (data) ->
+        @client.post("statuses/destroy/#{id}", options).then (data) ->
           resolve data
         .catch (err) ->
           reject err
