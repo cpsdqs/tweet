@@ -43,7 +43,9 @@ class Compose extends View
 
       @content.focus()
 
-    @content.addEventListener 'keyup', (e) =>
+    # HACK: remove styles
+    @content.addEventListener 'mousemove', (e) =>
+      # keyup messes up some stuff
       @content.innerText = @content.innerText
     @submitButton.addEventListener 'click', (e) =>
       text = @content.innerText
