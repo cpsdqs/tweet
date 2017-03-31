@@ -11,6 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "coffeescript": "^2.0.0-alpha1",
+    "electron": "^1.6.2",
     "electron-config": "^0.2.1",
     "electron-ipc-stream": "^0.2.0",
     "json-stable-stringify": "^1.0.1",

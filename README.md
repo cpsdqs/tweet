@@ -14,3 +14,7 @@ In the New Tweet window files can be added by just including the following:
 - run `npm install --dev`
 - run `npm run compile-styles`
 - run `npm start`
+
+## Screenshots
+![Login Window on Arch Linux](https://i.imgur.com/BRlmgXm.png)
+![Timeline on macOS](https://i.imgur.com/QeVhdzk.png)
