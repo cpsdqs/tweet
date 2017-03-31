@@ -24,6 +24,8 @@ class Compose extends View
 
     @inReplyTo.value = @args.replyTo if @args.replyTo
 
+    @content.innerText = @args.prepend if @args.prepend
+
     @once 'connected', =>
       @innerHTML = """
       <header class="compose-header"></header>

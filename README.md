@@ -7,7 +7,6 @@ In the New Tweet window files can be added by just including the following:
 ```
 !%mime/type|path/to/file%!
 ```
-@ mentions have to be added manually.
 
 ## Usage
 - Clone this repo

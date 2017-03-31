@@ -59,7 +59,16 @@ class Tweet extends View
         @classList.add 'retweeted'
 
     @buttons.reply.addEventListener 'click', (e) =>
-      ipc.send 'open-window', 'compose', replyTo: @tweet.id_str
+      mentions = []
+      if @content.entities
+        for entity in @content.entities?.user_mentions
+          if entity.id_str isnt twitter.account
+            mentions.push "@#{entity.screen_name}"
+      if not mentions.length
+        mentions.push "@#{@tweet.user.screen_name}"
+      ipc.send 'open-window', 'compose',
+        replyTo: @tweet.id_str
+        prepend: mentions.join ' '
 
     @buttons.like.addEventListener 'click', (e) =>
       command = 'favTweet'
