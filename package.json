@@ -1,0 +1,27 @@
+{
+  "name": "tweet",
+  "version": "0.0.0",
+  "description": "Twitter Client",
+  "main": "src/main/init.js",
+  "scripts": {
+    "start": "./node_modules/.bin/electron .",
+    "compile-styles": "./node_modules/.bin/gulp compile-styles"
+  },
+  "author": "cpsdqs",
+  "license": "MIT",
+  "dependencies": {
+    "coffeescript": "^2.0.0-alpha1",
+    "electron-config": "^0.2.1",
+    "electron-ipc-stream": "^0.2.0",
+    "json-stable-stringify": "^1.0.1",
+    "twitter": "^1.7.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-less": "^3.3.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-watch": "^4.3.11"
+  }
+}

@@ -1,0 +1,55 @@
+@import 'variables';
+
+window-compose {
+  display: flex;
+  height: 100%;
+  color: @text;
+  flex-direction: column;
+
+  .compose-header {
+    height: 38px;
+    -webkit-app-region: drag;
+    text-align: center;
+    line-height: 38px;
+    flex-shrink: 0;
+
+    .title {
+      font-weight: 600;
+    }
+  }
+
+  .compose-wrap {
+    height: 100%;
+    display: flex;
+
+    .account {
+      width: 56px;
+      flex-shrink: 0;
+    }
+    .content-wrap {
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+
+      .content {
+        width: 100%;
+        word-break: break-all;
+      }
+    }
+  }
+
+  .compose-footer {
+    flex-shrink: 0;
+    padding: 10px;
+    text-align: right;
+
+    .char-count {
+      margin-right: 0.5em;
+      opacity: 0.5;
+    }
+    .submit-button {
+      background: @accent;
+      padding: 0.3em 1em;
+    }
+  }
+}

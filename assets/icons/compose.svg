@@ -1,0 +1,16 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <path id="compose-a" d="M0,0.998502329 C0,0.44704472 0.45097518,0 0.990777969,0 L5.00922203,0 C5.55641359,0 6,0.447489426 6,0.998502329 L6,13 L0,13 L0,0.998502329 Z"/>
+    <mask id="compose-c" width="6" height="13" x="0" y="0" fill="#fff">
+      <use xlink:href="#compose-a"/>
+    </mask>
+    <path id="compose-b" d="M0,14 L6,14 L3.51571839,18.1404694 C3.23089499,18.615175 2.76459503,18.6076584 2.48428161,18.1404694 L0,14 Z"/>
+    <mask id="compose-d" width="6" height="5" x="0" y="0" fill="#fff">
+      <use xlink:href="#compose-b"/>
+    </mask>
+  </defs>
+  <g fill="none" fill-rule="evenodd" stroke="#000" stroke-width="2" transform="rotate(45 3.879 21.864)">
+    <use mask="url(#compose-c)" xlink:href="#compose-a"/>
+    <use mask="url(#compose-d)" xlink:href="#compose-b"/>
+  </g>
+</svg>

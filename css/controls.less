@@ -1,0 +1,65 @@
+@import 'variables';
+
+ui-icon {
+  display: inline-block;
+  line-height: 0;
+
+  svg {
+    max-width: 100%;
+    max-height: 100%;
+    line-height: normal;
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+button, ui-icon-button {
+  display: inline-block;
+  background: @background;
+  color: @text;
+  border-radius: 2px;
+  border: none;
+  font: inherit;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+
+  & > ui-icon {
+    height: 1em;
+  }
+
+  &:active {
+    background: lighten(@background, 10%);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px @focus;
+  }
+}
+ui-icon-button {
+  line-height: 0;
+  min-width: 4em;
+}
+
+.button-group {
+  display: inline-block;
+
+  button, ui-icon-button {
+    &:first-child {
+      border-radius: 0;
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+    }
+    &:not(:last-child) {
+      border-right: 1px solid fade(@text, 10%);
+    }
+    &:last-child {
+      border-radius: 0;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+  }
+}

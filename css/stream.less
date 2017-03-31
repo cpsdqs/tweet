@@ -1,0 +1,16 @@
+ui-stream {
+  max-height: 100%;
+  display: block;
+  overflow: auto;
+
+  .error-message {
+    padding: 10px;
+    display: block;
+    text-align: center;
+    color: @error;
+
+    &:empty {
+      display: none;
+    }
+  }
+}

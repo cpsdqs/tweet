@@ -1,0 +1,12 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <circle id="verified-a" cx="12" cy="12" r="11"/>
+    <mask id="verified-b" width="22" height="22" x="0" y="0" fill="#fff">
+      <use xlink:href="#verified-a"/>
+    </mask>
+  </defs>
+  <g fill="none" fill-rule="evenodd" stroke="#000">
+    <use stroke-width="2" mask="url(#verified-b)" xlink:href="#verified-a"/>
+    <polyline stroke-linecap="round" stroke-linejoin="round" points="7 12.995 10 15.995 17 9"/>
+  </g>
+</svg>

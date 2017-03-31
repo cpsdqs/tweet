@@ -1,0 +1,8 @@
+<svg width="24" height="24" viewBox="0 0 24 24">
+  <g fill="none" fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5.75,8.25 C5.75,8.25 11.25,8.25 13.25,8.25 C16.25,8.25 16.25,10.25 16.25,11.25 C16.25,12.25 16.25,18.25 16.25,18.25" transform="matrix(0 1 1 0 -2.25 2.25)"/>
+    <path d="M7.75,6.25 C7.75,6.25 13.25,6.25 15.25,6.25 C18.25,6.25 18.25,8.25 18.25,9.25 C18.25,10.25 18.25,16.25 18.25,16.25" transform="matrix(0 -1 -1 0 24.25 24.25)"/>
+    <polyline points="20 11.5 16 15.5 20 19.5" transform="rotate(-90 18 15.5)"/>
+    <polyline points="8 5.5 4 9.5 8 13.5" transform="rotate(90 6 9.5)"/>
+  </g>
+</svg>
